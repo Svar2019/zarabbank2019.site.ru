@@ -1,0 +1,597 @@
+﻿
+
+<html>
+<head>
+    <title>Office-Bank</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="img\hsfav.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css\style.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<script>
+		$(document).ready(function(){
+			setInterval(function(){
+				$('.countdown').each(function(){
+					var time=$(this).text().split(':');
+					var timestamp=time[0]*60+ time[1]*1;timestamp-=timestamp>0;
+					
+					var minutes=Math.floor(timestamp/60);
+					var seconds=timestamp- minutes*60;
+					
+				if(minutes<10){minutes='0'+ minutes;}
+				if(seconds<10){seconds='0'+ seconds;}
+				if(timestamp>0){
+				$(this).text(minutes+':'+ seconds);
+				}else{
+				$(this).text('В обработке');
+				}
+				});
+		},1000);
+
+		})
+        
+		</script>
+
+<script>
+  $(function(){
+  var hash = window.location.hash;
+  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+  $('.nav-tabs a').click(function (e) {
+    $(this).tab('show');
+    var scrollmem = $('body').scrollTop();
+    window.location.hash = this.hash;
+    $('html,body').scrollTop(scrollmem);
+  });
+}); 
+</script>
+  
+<style>  
+  
+
+element.style {
+}
+body {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-image: url(img/bank.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+  
+.footer {
+     background-color: #000;
+     color: #fff;
+     margin: 0 auto;
+     padding: 20px;
+     font-weight: bold;
+}  
+  
+.heade {
+    background-image: url(img/vity.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 1000px 450px;
+    background-size: 1000px 450px;
+    height: 450px;
+    filter: drop-shadow(0px 0);
+}  
+  
+.main {
+    background-color: rgba(0,0,0, .0);
+    border-radius: 0px 0px 0 0;
+    width: 100%;
+    margin: 0 auto;
+    filter: drop-shadow(0px 0);
+}  
+  
+.container {
+    width: 100%;
+    margin: 0 auto;
+}  
+  
+.login__input {
+    
+    background: #fff;
+    outline: none;
+    border: none;
+    border-top: 2px solid #00c77b;
+    border-bottom: 2px solid #00c77b;
+    border-right: 2px solid #00c77b; 
+    border-left: 2px solid #00c77b;
+    text-align: center;
+    font-size: 25px;
+    width: 400px;
+    height: 55px;
+    padding: 5px 10px 5px 10px;
+    background-image: url(../img/picon2.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 90px 45px;
+    background-size: 90px 45px;
+    background-position: 0.5% 50%;
+    border-radius: 2px 0 0 2px;
+}  
+
+.login__btn {
+    background: #ff9900;
+    outline: none;
+    border: none;
+    border-top: 2px solid #00c77b;
+    border-bottom: 2px solid #00c77b;
+    border-right: 2px solid #00c77b;
+    border-left: 0px dashed #000;
+    text-align: center;
+    font-size: 25px;
+    width: 400px;
+    height: 55px;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    transition: all .4s ease;
+}  
+  
+  
+</style>  
+  
+  </head>
+      
+      
+
+<body>  
+
+<center>
+<div style="background-color: rgba(0,0,0, .5); border-radius:0px; border:#000 0px solid; width:100%; margin:avto; padding:0px;">  
+  
+		<table width="100%" height="10" style="background-color: rgba(0,0,0, .6); width:100%;">
+			<tbody><tr align="center">             
+			    <td> <br> 
+		<table style="font-size: 17px;" width="80%" height="20"><center>
+			<tbody><tr align="center">
+              <td width="150"><b><a href="index.htm?page=main"><font color="#fff">Главная</font></a></b></td>				  <td width="150"><a href="index-1.htm?page=about"><font color="#fff">О проекте</font></a></td>              
+              <td width="150"><a href="index-2.htm?page=contacts"><font color="#fff">Tех. поддержка</font></a></td>
+              <td width="150"><a href="https://vk.com/public189803052"><font color="#fff">Наша группа VK</font></a></td>
+					</tr>
+				</tbody></center></table>  
+<br>  
+</td></tr></tbody></table>  
+  
+<div class="heade">
+
+</div>  
+  
+
+		<table cellpadding="25" style="background-color: rgba(0,0,0, .6); width:100%; border:#fff 0px solid; border-radius: 0px; float: center; text-align: center">
+			<tbody><tr align="center">
+			    <td><b style="color: #fff; font-size: 17px;">1133 чел.<br>Участников</b></td>
+                <td><b style="color: #fff; font-size: 17px;">185 чел.<br>Сейчас online</b></td>
+                <td><b style="color: #fff; font-size: 17px;">1  день<br>Работаем</b></td>
+				<td><b style="color: #fff; font-size: 17px;">10006₽<br>Пополнено</b></td>          
+				<td><b style="color: #fff; font-size: 17px;">757.40₽<br>Выплачено</b></td>
+                   </tr>
+            </tbody>
+        </table>  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<main class="main">
+  <div class="container">
+    
+
+        
+
+
+				
+		
+
+<div class="headtext-flex">
+  <div class="headtext-block">
+    <br>
+  </div>
+</div>
+
+
+<form action="" method="post" class="login">  
+  <input type="hidden" name="do" value="toaccount">
+  <input type="hidden" name="antipovtor" value="1518687348">
+  <input required="" pattern="^P[0-9]+$" title="Например: P12345678" autocomplete="on" name="wallet" placeholder="ВВЕДИТЕ PAYEER" size="30" type="text" class="login__input">
+  <input style="background: #00c77b;" type="submit" name="submit" id="form" value="ВХОД | РЕГИСТРАЦИЯ" class="login__btn">
+</form>
+<p class="login__description">Введите в поле выше Ваш кошелек. Нет кошелька PAYEER? <a href="https://payeer.com/06839598" target="_blank" style="color: red;">Зарегистрируйте бесплатно!</a></p>
+
+
+<div class="all">
+<style>  
+.vkladi-flex {
+    background-color: rgba(0, 0, 0, 0.0);
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    width: 90%;
+    text-align: center;
+}
+  
+.vkladi-in {
+    width: 50%;
+    text-align: center;
+}
+.vkladi-out {
+    width: 50%;
+    text-align: center;
+    border-left: 1px solid #fff;
+}  
+  
+  
+  
+  
+  
+</style>  
+  
+<h1 class="all__title">Живая статистика проекта</h1>
+
+<center>
+
+<div class="vkladi-flex">
+	<div class="vkladi-in">
+		
+
+<h3 class="all__title">ПОСЛЕДНИЕ ПОПОЛНЕНИЯ</h3>
+          		
+<table cellpadding='10' cellspacing='10' align='center'>
+<tr>
+    <td align="center" width="115"><b>Дата</b></td>
+	<td align="center" width="115"><b>Кошелек</b></td>
+	<td align="center" width="115"><b>Депозит</b></td>
+	<td align="center" width="115"><b>На вывод</b></td>
+	<!-- <td align="center" width=""><b>На вывод	</b></td> -->
+  </tr>  
+  
+ 
+
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 08:47</td>
+	
+	
+	
+	
+	<td align="center"> P1018148<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1422:39</td>-->
+      <td align="center"><b>15</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 08:30</td>
+	
+	
+	
+	
+	<td align="center"> P1017838<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1405:28</td>-->
+      <td align="center"><b>15</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 08:08</td>
+	
+	
+	
+	
+	<td align="center"> P48758<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>20.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1383:35</td>-->
+      <td align="center"><b>30</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 08:06</td>
+	
+	
+	
+	
+	<td align="center"> P1019380<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>100.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1381:09</td>-->
+      <td align="center"><b>150</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 07:57</td>
+	
+	
+	
+	
+	<td align="center"> P1007842<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>100.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1372:05</td>-->
+      <td align="center"><b>150</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 07:42</td>
+	
+	
+	
+	
+	<td align="center"> P4822<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>100.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1357:55</td>-->
+      <td align="center"><b>150</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 06:44</td>
+	
+	
+	
+	
+	<td align="center"> P82877<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>50.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1299:28</td>-->
+      <td align="center"><b>75</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 06:41</td>
+	
+	
+	
+	
+	<td align="center"> P1016429<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>100.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1296:40</td>-->
+      <td align="center"><b>150</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 06:39</td>
+	
+	
+	
+	
+	<td align="center"> P1016429<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>100.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1294:53</td>-->
+      <td align="center"><b>150</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+  
+	<tr class="htt" style="border-bottom: 1px solid #fff;">
+	<td align="center">17.12 05:58</td>
+	
+	
+	
+	
+	<td align="center"> P1015951<i class="fas fa-ellipsis-h"></i></td>
+      <td align="center"> <b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	
+	
+	
+	
+	<!-- <td class="countdown" align="center">1253:26</td>-->
+      <td align="center"><b>15</b> <i class="fas fa-ruble-sign"></i></td> 
+  	</tr>
+ 
+  
+ </table>
+
+
+	</div>
+	<div class="vkladi-out">
+		
+
+
+<h3 class="all__title">ПОСЛЕДНИЕ ВЫПЛАТЫ</h3>
+          		
+<table cellpadding='10' cellspacing='10' align='center'>
+<tr>
+    <td align="center" width="115"><b>Дата</b></td>
+	<!-- <td align="center" width=""><b>Система</b></td> -->
+	<td align="center" width="115"><b>Кошелек</b></td>
+	<td align="center" width="115"><b>Выплата</b></td>
+	<td align="center" width="115"><b>Операция</b></td>
+</tr>
+  
+
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 08:06</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1006340<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 07:43</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1001092<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 06:44</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1018915<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>6.00</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 06:44</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1018915<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>6.00</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 06:41</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1007842<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 06:39</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1007842<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>10.00</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 04:26</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1006340<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>1.10</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 04:14</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P45352<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>1.10</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 04:14</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P45352<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>1.10</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+
+<tr class="htt">
+	<td align="center">17.12 02:56</td>
+	<!-- <td align="left">PAY<font color="blue">EER</font></td> -->
+   <td align="center">P1006172<i class="fas fa-ellipsis-h"></i></td>
+	<td align="center"><b>10.40</b> <i class="fas fa-ruble-sign"></i></td>
+	<td align="center"><font color="#fff"><b>Реферальные</b></font></td>
+  	</tr>
+
+ 
+  
+ </table>
+
+
+
+
+	</div>
+</div>
+
+
+
+
+   
+  </center></div>
+</div></main>
+<br>
+<style>
+ .foote {
+     background-color: #000;
+     color: #fff;
+     margin: 0 auto;
+     padding: 20px;
+     font-weight: bold;
+} 
+</style>
+
+		<table cellpadding="25" style=" width:70%; border:#fff 0px solid; border-radius: 0px; float: center; text-align: center">
+			<tbody><tr align="center">
+			    <td><div id="linkslot_271423"><script src="https://linkslot.ru/bancode.php?id=271423" async=""></script></div></td>
+				<td><div id="linkslot_271424"><script src="https://linkslot.ru/bancode.php?id=271424" async=""></script></div></td>          
+				
+                   </tr>
+            </tbody>
+        </table>
+
+
+
+<footer class="foote">
+	Office-Bank © Copyright 2019. Все права защищены.
+</footer>
+
+
+</div></center></body>
+</html>

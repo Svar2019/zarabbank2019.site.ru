@@ -1,0 +1,28 @@
+Uri: https://office-bank.fun/?page=main
+File Name: c:\Downloaded Web Sites\office-bank.fun\index.htm
+Content Type: text/html
+
+Uri: https://office-bank.fun/img/bank.png
+File Name: c:\Downloaded Web Sites\office-bank.fun\img\bank.png
+Content Type: image/png
+
+Uri: https://office-bank.fun/img/vity.png
+File Name: c:\Downloaded Web Sites\office-bank.fun\img\vity.png
+Content Type: image/png
+
+Uri: https://office-bank.fun/img/hsfav.png
+File Name: c:\Downloaded Web Sites\office-bank.fun\img\hsfav.png
+Content Type: image/png
+
+Uri: https://office-bank.fun/css/style.css
+File Name: c:\Downloaded Web Sites\office-bank.fun\css\style.css
+Content Type: text/css
+
+Uri: https://office-bank.fun/?page=about
+File Name: c:\Downloaded Web Sites\office-bank.fun\index-1.htm
+Content Type: text/html
+
+Uri: https://office-bank.fun/?page=contacts
+File Name: c:\Downloaded Web Sites\office-bank.fun\index-2.htm
+Content Type: text/html
+
